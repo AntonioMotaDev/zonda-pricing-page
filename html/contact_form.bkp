@@ -1,0 +1,156 @@
+ <!-- Contact Form -->
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                  <div class="row">
+                    <!-- Nombre -->
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          id="firstName" 
+                          name="firstName"
+                          placeholder="Nombre"
+                          required
+                        >
+                        <label for="firstName">Nombre *</label>
+                      </div>
+                    </div>
+
+                    <!-- Apellido -->
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          id="lastName" 
+                          name="lastName"
+                          placeholder="Apellido"
+                          required
+                        >
+                        <label for="lastName">Apellido *</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Email -->
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input 
+                          type="email" 
+                          class="form-control" 
+                          id="email" 
+                          name="email"
+                          placeholder="correo@ejemplo.com"
+                          required
+                        >
+                        <label for="email">Correo Electrónico *</label>
+                      </div>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input 
+                          type="tel" 
+                          class="form-control" 
+                          id="phone" 
+                          name="phone"
+                          placeholder="+52 444 123 4567"
+                        >
+                        <label for="phone">Teléfono</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Empresa -->
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          id="company" 
+                          name="company"
+                          placeholder="Nombre de la empresa"
+                        >
+                        <label for="company">Empresa</label>
+                      </div>
+                    </div>
+
+                    <!-- Plan de interés -->
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <select class="form-select" id="plan" name="plan" required>
+                          <option value="">Selecciona un plan</option>
+                          <option value="lite">LITE</option>
+                          <option value="liteplus">LITE+</option>
+                          <option value="pro">PRO</option>
+                          <option value="consulta">Solo consulta</option>
+                        </select>
+                        <label for="plan">Plan de Interés *</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mensaje -->
+                  <div class="mb-4">
+                    <div class="form-floating">
+                      <textarea 
+                        class="form-control" 
+                        id="message" 
+                        name="message"
+                        placeholder="Cuéntanos sobre tu empresa y necesidades..."
+                        style="height: 120px"
+                        required
+                      ></textarea>
+                      <label for="message">Mensaje *</label>
+                    </div>
+                    <div class="form-text">
+                      Cuéntanos sobre tu empresa, número de técnicos, clientes actuales y qué funcionalidades son más importantes para ti.
+                    </div>
+                  </div>
+
+                  <!-- Términos y condiciones -->
+                  <div class="mb-4">
+                    <div class="form-check">
+                      <input 
+                        class="form-check-input" 
+                        type="checkbox" 
+                        id="terms" 
+                        name="terms"
+                        required
+                      >
+                      <label class="form-check-label" for="terms">
+                        Acepto los <a href="#" class="text-decoration-underline">términos y condiciones</a> 
+                        y las <a href="#" class="text-decoration-underline">políticas de privacidad</a> *
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Botones -->
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg contact-submit-btn me-3">
+                      <span class="btn-text">Enviar Solicitud</span>
+                      <span class="btn-loading d-none">
+                        <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                        Enviando...
+                      </span>
+                    </button>
+                    <!-- <button type="button" class="btn btn-outline-primary btn-lg" id="emailFallbackBtn">
+                      <i class="bi bi-envelope me-2"></i>Abrir en Email
+                    </button> -->
+                  </div>
+                  
+
+                  <!-- Mensaje de éxito/error -->
+                  <div class="form-message mt-3 text-center d-none">
+                    <div class="alert" role="alert"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>

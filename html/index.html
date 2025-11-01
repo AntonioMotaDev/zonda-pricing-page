@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planes para ZONDA ERP</title>
+
+    <!-- Bootstrap  y CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/pricing.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/scheduler.css" />
+  </head>
+  <body>
+    <header class="bg-dark-blue">
+      <nav class="navbar navbar-expand-lg header-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="../img/LogotipoHorizontal.png" alt="ZONDA ERP" height="100">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#hero">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#pricing">Planes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#comparative">Comparativa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ayuda.html">Ayuda</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero-section ">
+        <div class="container">
+          <div class="row px-4">
+            <div class="col text-center">
+              <h1>PLANES DE RENTA</h1>
+              <h4>
+                <b>¡SMIP Revolution!</b> El primer ERP que convierte tu control de
+                plagas en una ventaja competitiva.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WhatsApp Floating Button -->
+      <a href="https://wa.me/524448447798?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20ZONDA%20ERP" 
+        class="whatsapp-float" 
+        target="_blank" 
+        aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing-section">
+        <div class="pricing-container">
+          <!-- Header de la sección de precios -->
+          <div class="pricing-header">
+            <!-- <h1>Precios simples y transparentes</h1>
+            <p>Sin contratos. Sin tarifas sorpresa.</p> -->
+            
+            <div class="billing-toggle">
+              <div class="toggle-button">
+                <button class="toggle-option active" onclick="toggleBilling('monthly')">MENSUAL</button>
+                <button class="toggle-option" onclick="toggleBilling('yearly')">ANUAL</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjetas de precios -->
+          <div class="pricing-cards">
+
+            <!-- Plan LITE -->
+            <div class="pricing-card lite-card">
+              <h2 class="plan-name">LITE</h2>
+
+              <div class="price">
+                <div class="price-amount" data-monthly="$XX" data-yearly="$XX0">$XX</div>
+                <div class="price-period">/mes</div>
+              </div>
+              <p class="plan-description">Para empresas y negocios que buscan gestionar sus operaciones en crecimiento</p>
+              
+              <ul class="features-list">
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>CRM básico con seguimiento de prospectos</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Planificación de servicios con calendario</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Gestión de órdenes de servicio</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Catálogo de servicios y plagas</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Control de inventario (1 almacén)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Portal de clientes (2GB)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>3 cuentas incluidas</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="cta-button">Comprar</a>
+            </div>
+
+            <!-- Plan LITE+ -->
+            <div class="pricing-card liteplus-card popular">
+              <div class="popular-badge">Más Popular</div>
+              <h2 class="plan-name">LITE <span class="text-terracotta">+</span> </h2>
+              <div class="price">
+                <div class="price-amount" data-monthly="$XXX" data-yearly="$XXX0">$XXX</div>
+                <div class="price-period">/mes</div>
+              </div>
+              <p class="plan-description">Para empresas en crecimiento que necesitan funcionalidades avanzadas y mejor control</p>
+              
+
+              <ul class="features-list">
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>CRM avanzado con actividades comerciales</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Gestión completa de contratos</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Control de inventario (hasta 3 almacenes)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Gestión de recursos humanos</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Control de almacén por técnico</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Portal de clientes (5GB)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>6 cuentas incluidas</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="cta-button">Comprar</a>
+            </div>
+
+            <!-- Plan PRO -->
+            <div class="pricing-card pro-card">
+              <h2 class="plan-name">PRO</h2>
+
+              <div class="price">
+                <div class="price-amount" data-monthly="$XXX" data-yearly="$XXXX">$XXX</div>
+                <div class="price-period">/mes</div>
+              </div>
+              <p class="plan-description">Para empresas establecidas que requieren funcionalidad y análisis avanzado</p>
+              
+              <ul class="features-list">
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>CRM completo con organización por zonas</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Gestión de planos y puntos de control</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Configuración personalizada de reportes</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Análiticas de incidencia y tendencias</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Control avanzado de inventario</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Portal de clientes (10GB)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>9 cuentas incluidas</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="cta-button">Comprar</a>
+            
+            </div>
+          </div>
+
+          <!-- Mockups Section -->
+          <div class="mockups-section">
+            <div class="mockups-header">
+              <h3>Explora el Sistema</h3>
+              <p>Conoce la interfaz intuitiva y potente de ZONDA ERP</p>
+            </div>
+            
+            <div class="mockups-grid">
+              <div class="mockup-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="mockup-image-wrapper">
+                  <img src="../img/SOFTWARE_SF.png" alt="Software de Zonda ERP" class="mockup-img"/>
+                  <div class="mockup-overlay">
+                    <div class="mockup-info">
+                      <h4>Sistema Web</h4>
+                      <p>Gestiona tu empresa desde cualquier navegador</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mockup-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="mockup-image-wrapper">
+                  <img src="../img/appZonda.png" alt="Aplicación de Zonda ERP" class="mockup-img"/>
+                  <div class="mockup-overlay">
+                    <div class="mockup-info">
+                      <h4>App Móvil</h4>
+                      <p>Control total en campo para tus técnicos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mockup-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="mockup-image-wrapper">
+                  <img src="../img/compuZonda.png" alt="Computadora de Zonda ERP" class="mockup-img"/>
+                  <div class="mockup-overlay">
+                    <div class="mockup-info">
+                      <h4>Escritorio</h4>
+                      <p>Versión completa para administración</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Comparative Section -->
+      <section id="comparative" class="comparative-section ">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center mb-2">
+              <p class="lead">Conoce todas las características y funcionalidades</p>
+              <h2>Comparativa Detallada de Planes</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="comparacion">
+          <!-- Sistema Básico -->
+          <div class="sistema sistema-basico">
+            <div class="sistema-header">LITE</div>
+            <div class="sistema-contenido">
+              <div class="modulo crm">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#crm-lite" aria-expanded="true" aria-controls="crm-lite">Gestión Relación con Clientes (CRM)</div>
+                <div class="modulo-contenido collapse show" id="crm-lite">
+                  <div class="caracteristica">
+                    Seguimiento de prospectos y oportunidades de venta.
+                  </div>
+                  <div class="caracteristica">Catálogo de Clientes.</div>
+                </div>
+              </div>
+
+              <div class="modulo erp">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#erp-lite" aria-expanded="false" aria-controls="erp-lite">
+                  Planificación y Operaciones de Campo
+                </div>
+                <div class="modulo-contenido collapse" id="erp-lite">
+                  <div class="caracteristica">
+                    Planificación de Servicios: calendario/agenda visual para
+                    programar visitas.
+                  </div>
+                  <div class="caracteristica">
+                    Gestión de Órdenes de Servicio (OS): creación y asignación de
+                    trabajo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo calidad">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#calidad-lite" aria-expanded="false" aria-controls="calidad-lite">Gestión de Calidad</div>
+                <div class="modulo-contenido collapse" id="calidad-lite">
+                  <div class="caracteristica">
+                    Catálogo de Servicios: definición de tipos de servicios basicos
+                    que la empresa ofrece.
+                  </div>
+                  <div class="caracteristica">
+                    Catálogo de Plagas: base de datos para clasificar y gestionar
+                    información sobre plagas objetivo
+                  </div>
+                  <div class="caracteristica">
+                    Generación de Reportes de Servicio: informes detallados
+                    post-visita con hallazgos, productos aplicados y recomendaciones
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo inventario">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#inventario-lite" aria-expanded="false" aria-controls="inventario-lite">Gestión de Almacén e Inventario</div>
+                <div class="modulo-contenido collapse" id="inventario-lite">
+                  <div class="caracteristica">
+                    Catálogo de Productos: base de datos detallada de insecticidas,
+                    rodenticidas, trampas, etc.
+                  </div>
+                  <div class="caracteristica">
+                    Control de Stock (1 almacén): administración de existencias,
+                    entradas y salidas del almacén, manejo de lotes y fechas de
+                    vencimiento
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo rrhh">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#rrhh-lite" aria-expanded="false" aria-controls="rrhh-lite">Gestión de Recursos Humanos (RRHH)</div>
+                <div class="modulo-contenido collapse" id="rrhh-lite">
+                  <div class="no-caracteristica">No aplica</div>
+                </div>
+              </div>
+
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#app-lite" aria-expanded="false" aria-controls="app-lite">Aplicación de Técnicos</div>
+                <div class="modulo-contenido collapse" id="app-lite">
+                  <div class="caracteristica">Funcionalidad para técnicos</div>
+                </div>
+              </div>
+
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#portal-lite" aria-expanded="false" aria-controls="portal-lite">Portal de Clientes</div>
+                <div class="modulo-contenido collapse" id="portal-lite">
+                  <div class="caracteristica">
+                    Acceso Seguro: interfaz exclusiva para que los clientes accedan a
+                    su información
+                  </div>
+                  <div class="caracteristica">
+                    Manejo de Certificados y Documentación: acceso a historial
+                    certificados por orden de servicio generada y documentacion por
+                    cada cliente.
+                  </div>
+                  <div class="caracteristica">Capacidad de <b> 2Gb </b></div>
+                </div>
+              </div>
+
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#cuentas-lite" aria-expanded="false" aria-controls="cuentas-lite">Cuentas incluidas en el plan</div>
+                <div class="modulo-contenido collapse" id="cuentas-lite">
+                  <div class="caracteristica">
+                    1 cuenta administrador
+                  </div>
+                  <div class="caracteristica">
+                    1 cuenta administrativa
+                  </div>
+                  <div class="caracteristica">
+                      1 cuenta para técnico
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sistema liteplus -->
+          <div class="sistema sistema-liteplus">
+            <div class="sistema-header">
+              LITE <span class=" fw-bold">+</span>
+            </div>
+            <div class="sistema-contenido">
+              <div class="modulo crm">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#crm-liteplus" aria-expanded="true" aria-controls="crm-liteplus">Gestión Relación con Clientes (CRM)</div>
+                <div class="modulo-contenido collapse show" id="crm-liteplus">
+                  <div class="caracteristica">
+                    Seguimiento de prospectos y oportunidades de venta
+                  </div>
+                  <div class="caracteristica">
+                    Planificación y registro de actividades comerciales (llamadas,
+                    visitas, reuniones)
+                  </div>
+                  <div class="caracteristica">Catálogo de Clientes</div>
+                </div>
+              </div>
+
+              <div class="modulo erp">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#erp-liteplus" aria-expanded="false" aria-controls="erp-liteplus">
+                  Planificación y Operaciones de Campo
+                </div>
+                <div class="modulo-contenido collapse" id="erp-liteplus">
+                  <div class="caracteristica">
+                    Planificación de Servicios: calendario/agenda visual para
+                    programar visitas y asignar técnicos
+                  </div>
+                  <div class="caracteristica">
+                    Gestión de Órdenes de Servicio (OS): creación, asignación y
+                    seguimiento detallado de cada trabajo, único o recurrente
+                  </div>
+                  <div class="caracteristica">
+                    Administración de Contratos: gestión de acuerdos de servicio
+                    periódicos, definiendo alcance, frecuencia y condiciones
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo calidad">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#calidad-liteplus" aria-expanded="false" aria-controls="calidad-liteplus">Gestión de Calidad</div>
+                <div class="modulo-contenido collapse" id="calidad-liteplus">
+                  <div class="caracteristica">
+                    Catálogo de Servicios: definición de tipos de servicios
+                    especializados en la aplicación quimica y el manejo integrado de
+                    plagas.
+                  </div>
+                  <div class="caracteristica">
+                    Catálogo de Plagas: base de datos para clasificar y gestionar
+                    información sobre plagas objetivo
+                  </div>
+                  <div class="caracteristica">
+                    Manejo de clientes: Gestion del historial completo de servicios,
+                    contratos, reportes por cada cliente
+                  </div>
+                  <div class="caracteristica">
+                    Generación de Reportes de Servicio: informes detallados
+                    post-visita con hallazgos, productos aplicados y recomendaciones
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo inventario">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#inventario-liteplus" aria-expanded="false" aria-controls="inventario-liteplus">Gestión de Almacén e Inventario</div>
+                <div class="modulo-contenido collapse" id="inventario-liteplus">
+                  <div class="caracteristica">
+                    Catálogo de Productos: base de datos detallada con información
+                    completa de productos
+                  </div>
+                  <div class="caracteristica">
+                    Control de Stock( hasta 3 almacenes): administración de
+                    existencias, entradas y salidas de 1 o varios almacenes, manejo de
+                    lotes y fechas de vencimiento.
+                  </div>
+                  <div class="caracteristica">
+                    Control de Almacen para cada técnico: permite llevar un control
+                    del inventario asignado a cada técnico.
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo rrhh">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#rrhh-liteplus" aria-expanded="false" aria-controls="rrhh-liteplus">Gestión de Recursos Humanos (RRHH)</div>
+                <div class="modulo-contenido collapse" id="rrhh-liteplus">
+                  <div class="caracteristica">
+                    Gestión de Personal: Administración de información del personal.
+                  </div>
+                  <div class="caracteristica">Administracion de Técnicos.</div>
+                  <div class="caracteristica">
+                    Control de estados de técnicos: disponibilidad, vacaciones y
+                    licencias.
+                  </div>
+                  <div class="destacado">
+                    Detalles adicionales: Este modulo va ligado a la cantidad y tipo
+                    de cuentas que se manejen en el sistema.
+                  </div>
+                </div>
+              </div>
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#app-liteplus" aria-expanded="false" aria-controls="app-liteplus">Aplicación de Técnicos</div>
+                <div class="modulo-contenido collapse" id="app-liteplus">
+                  <div class="caracteristica">Funcionalidad para técnicos</div>
+                </div>
+              </div>
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#portal-liteplus" aria-expanded="false" aria-controls="portal-liteplus">Portal de Clientes</div>
+                <div class="modulo-contenido collapse" id="portal-liteplus">
+                  <div class="caracteristica">
+                    Acceso Seguro: interfaz exclusiva para que los clientes accedan a
+                    su información
+                  </div>
+                  <div class="caracteristica">
+                    Manejo de Certificados y Documentación: acceso a historial
+                    certificados por orden de servicio generada y documentacion por
+                    cada cliente.
+                  </div>
+                  <div class="caracteristica">Capacidad de <b>5Gb</b></div>
+                </div>
+              </div>
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#cuentas-liteplus" aria-expanded="false" aria-controls="cuentas-liteplus">Cuentas incluidas en el plan</div>
+                <div class="modulo-contenido collapse" id="cuentas-liteplus">
+                  <div class="caracteristica">
+                    1 cuenta administrador
+                  </div>
+                  <div class="caracteristica">
+                    2 cuenta administrativa
+                  </div>
+                  <div class="caracteristica">
+                      3 cuenta para técnico
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sistema pro -->
+          <div class="sistema sistema-pro">
+            <div class="sistema-header"><span style="color: rgb(255, 191, 63);">PRO</span></div>
+            <div class="sistema-contenido">
+              <div class="modulo crm">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#crm-pro" aria-expanded="true" aria-controls="crm-pro">Gestión Relación con Clientes (CRM)</div>
+                <div class="modulo-contenido collapse show" id="crm-pro">
+                  <div class="caracteristica">
+                    Seguimiento de prospectos y oportunidades de venta
+                  </div>
+                  <div class="caracteristica">
+                    Planificación y registro de actividades comerciales (llamadas,
+                    visitas, reuniones)
+                  </div>
+                  <div class="caracteristica">Catálogo de Clientes</div>
+                  <div class="caracteristica">
+                    Organización de clientes por sucursales y zonas comerciales para
+                    optimizar la logística
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo erp">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#erp-pro" aria-expanded="false" aria-controls="erp-pro">
+                  Planificación y Operaciones de Campo
+                </div>
+                <div class="modulo-contenido collapse" id="erp-pro">
+                  <div class="caracteristica">
+                    Planificación de Servicios: calendario/agenda visual para
+                    programar visitas y asignar técnicos
+                  </div>
+                  <div class="caracteristica">
+                    Gestión de Órdenes de Servicio (OS): creación, asignación y
+                    seguimiento detallado de cada trabajo, único o recurrente
+                  </div>
+                  <div class="caracteristica">
+                    Administración de Contratos: gestión de acuerdos de servicio
+                    periódicos, definiendo alcance, frecuencia y condiciones
+                  </div>
+                  <div class="caracteristica">
+                    Gestión de Puntos de Control: permite definir, ubicar en planos y
+                    monitorear dispositivos específicos
+                  </div>
+                  <div class="caracteristica">
+                    Gestión de Planos: capacidad de asociar planos o diagramas de las
+                    instalaciones para ubicar visualmente los puntos de control
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo calidad">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#calidad-pro" aria-expanded="false" aria-controls="calidad-pro">Gestión de Calidad</div>
+                <div class="modulo-contenido collapse" id="calidad-pro">
+                  <div class="caracteristica">
+                    Catálogo de Servicios: definición de tipos de servicios
+                    especializados en la aplicación quimica y el manejo integrado de
+                    plagas.
+                  </div>
+                  <div class="caracteristica">
+                    Catálogo de Plagas: base de datos para clasificar y gestionar
+                    información sobre plagas objetivo
+                  </div>
+                  <div class="caracteristica">
+                    Manejo de clientes: Gestion del historial completo de servicios,
+                    contratos, reportes, planos y dispositivos por cada cliente
+                  </div>
+                  <div class="caracteristica">
+                    Generación de Reportes de Servicio: informes detallados
+                    post-visita con hallazgos, productos aplicados y recomendaciones
+                  </div>
+                  <div class="caracteristica">
+                    Configuración de Reportes: personalización de apariencia y
+                    contenido de los informes generados
+                  </div>
+                  <div class="caracteristica">
+                    Analiticas de incidencia: Estadísticos sobre incidencias y
+                    tendencias de plagas
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo inventario">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#inventario-pro" aria-expanded="false" aria-controls="inventario-pro">Gestión de Almacén e Inventario</div>
+                <div class="modulo-contenido collapse" id="inventario-pro">
+                  <div class="caracteristica">
+                    Catálogo de Productos: base de datos detallada con información
+                    completa de productos
+                  </div>
+                  <div class="caracteristica">
+                    Control de Stock(s): administración de existencias, entradas y
+                    salidas de 1 o varios almacenes, comprobantes de inventario y
+                    alertas de bajo stock, manejo de lotes y fechas de vencimiento.
+                  </div>
+                  <div class="caracteristica">
+                    Control de Almacen para cada técnico: permite llevar un control
+                    del inventario asignado a cada técnico.
+                  </div>
+                  <div class="destacado">
+                    Detalles adicionales: ingrediente activo, concentración, número de
+                    registro sanitario, dosificación, periodo de seguridad, efecto
+                    residual, fabricante y ficha técnica
+                  </div>
+                </div>
+              </div>
+
+              <div class="modulo rrhh">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#rrhh-pro" aria-expanded="false" aria-controls="rrhh-pro">Gestión de Recursos Humanos (RRHH)</div>
+                <div class="modulo-contenido collapse" id="rrhh-pro">
+                  <div class="caracteristica">
+                    Gestión de Personal: Administración de información del personal.
+                  </div>
+                  <div class="caracteristica">Administracion de Técnicos.</div>
+                  <div class="caracteristica">
+                    Control de estados de técnicos: disponibilidad, vacaciones y
+                    licencias.
+                  </div>
+                  <div class="caracteristica">
+                    Registro de la documentacion requerida para los administrativos y
+                    técnicos: licencias, certificaciones y capacitaciones.
+                  </div>
+                  <div class="destacado">
+                    Detalles adicionales: Este modulo va ligado a la cantidad y tipo
+                    de cuentas que se manejen en el sistema.
+                  </div>
+                </div>
+              </div>
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#app-pro" aria-expanded="false" aria-controls="app-pro">Aplicación de Técnicos</div>
+                <div class="modulo-contenido collapse" id="app-pro">
+                  <div class="caracteristica">Funcionalidad para técnicos</div>
+                </div>
+              </div>
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#portal-pro" aria-expanded="false" aria-controls="portal-pro">Portal de Clientes</div>
+                <div class="modulo-contenido collapse" id="portal-pro">
+                  <div class="caracteristica">
+                    Acceso Seguro: interfaz exclusiva para que los clientes accedan a
+                    su información
+                  </div>
+                  <div class="caracteristica">
+                    Manejo de Certificados y Documentación: acceso a historial
+                    certificados por orden de servicio generada y documentacion por
+                    cada cliente.
+                  </div>
+                  <div class="caracteristica">Capacidad de <b> 10Gb </b></div>
+                </div>
+              </div>
+              <div class="modulo">
+                <div class="modulo-titulo" data-bs-toggle="collapse" data-bs-target="#cuentas-pro" aria-expanded="false" aria-controls="cuentas-pro">Cuentas incluidas en el plan</div>
+                <div class="modulo-contenido collapse" id="cuentas-pro">
+                  <div class="caracteristica">
+                    1 cuenta administrador
+                  </div>
+                  <div class="caracteristica">
+                    3 cuenta administrativa
+                  </div>
+                  <div class="caracteristica">
+                      5 cuenta para técnico
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section ">
+        <div class="container">
+
+          <div class="row mb-0">
+            <div class="col text-center">
+              <p class="lead">Obtén más información sobre nuestros planes</p>
+              <h2>¿Estás listo para empezar?</h2>
+            </div>
+          </div>
+
+          <!-- Contact Info Cards -->
+          <!-- <div class="row mt-5">
+            <div class="col-md-4 mb-3">
+              <div class="contact-info-card text-center">
+                <div class="contact-icon-wrapper">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <h5>Escríbenos</h5>
+                <p>(+52) 444 844 77 98</p>
+                <p>contacto@zondaerp.com</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="contact-info-card text-center">
+                <div class="contact-icon-wrapper">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <h5>Agenda</h5>
+                <p>contacto@zondaerp.com</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="contact-info-card text-center">
+                <div class="contact-icon-wrapper">
+                  <i class="bi bi-clock-fill"></i>
+                </div>
+                <h5>Atencion a Clientes</h5>
+                <p>Lun - Vie: 8:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- Meeting Scheduler Section -->
+      <section id="scheduler" class="scheduler-section ">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <div class="scheduler-cta-wrapper">
+                <h3 class="scheduler-title">AGENDA UNA REUNIÓN</h3>
+                <p class="scheduler-subtitle">Agenda una reunión virtual y resolvamos todas tus dudas en tiempo real</p>
+                
+                <div class="scheduler-benefits mb-4">
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <div class="benefit-item">
+                        <i class="bi bi-camera-video-fill benefit-icon"></i>
+                        <div class="benefit-text">
+                          <strong>Videollamada</strong>
+                          <!-- <small>Por Google Meet</small> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="benefit-item">
+                        <i class="bi bi-clock-fill benefit-icon"></i>
+                        <div class="benefit-text">
+                          <strong>~ 30 minutos</strong>
+                          <!-- <small>Tiempo suficiente</small> -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <div class="benefit-item">
+                        <i class="bi bi-person-check-fill benefit-icon"></i>
+                        <div class="benefit-text">
+                          <strong>Soporte</strong>
+                          <!-- <small>Consulta gratuita</small> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-scheduler-cta" id="openSchedulerBtn">
+                  <i class="bi bi-calendar-plus me-2"></i>
+                  Agendar 
+                </button>
+                
+                <div class="scheduler-note mt-3">
+                  <small class="text-muted">
+                    <i class="bi bi-info-circle me-1"></i>
+                    Disponible de Lunes a Viernes de 9:00 AM a 3:00 PM (Hora de México)
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="scheduler-image-wrapper text-center">
+                <img src="../img/SOFTWARE_SF.png" alt="SOFTWARE ZONDA" class="img-fluid scheduler-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meeting Scheduler Modal -->
+      <div class="modal fade" id="schedulerModal" tabindex="-1" aria-labelledby="schedulerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content scheduler-modal-content">
+            <div class="modal-header scheduler-modal-header">
+              <h5 class="modal-title" id="schedulerModalLabel">
+                <i class="bi bi-calendar-event me-2"></i>
+                Agenda tu reunión
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body scheduler-modal-body">
+              <!-- Step 1: Date Selection -->
+              <div class="scheduler-step" id="dateStep">
+                <div class="step-header">
+                  <h6 class="step-title">1. Selecciona una fecha</h6>
+                  <p class="step-subtitle">Elige el día que mejor te convenga</p>
+                </div>
+                
+                <div class="calendar-container">
+                  <div class="calendar-header">
+                    <button type="button" class="btn btn-sm btn-outline-primary" id="prevMonth">
+                      <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <h6 class="calendar-month-year" id="currentMonthYear"></h6>
+                    <button type="button" class="btn btn-sm btn-outline-primary" id="nextMonth">
+                      <i class="bi bi-chevron-right"></i>
+                    </button>
+                  </div>
+                  
+                  <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar days will be generated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Time Selection -->
+              <div class="scheduler-step d-none" id="timeStep">
+                <div class="step-header">
+                  <button type="button" class="btn btn-sm btn-link p-0 mb-2" id="backToDate">
+                    <i class="bi bi-arrow-left me-1"></i>
+                    Cambiar fecha
+                  </button>
+                  <h6 class="step-title">2. Selecciona un horario</h6>
+                  <p class="step-subtitle">Horarios disponibles para <span id="selectedDateDisplay"></span></p>
+                </div>
+                
+                <div class="time-slots-container" id="timeSlotsContainer">
+                  <!-- Time slots will be generated by JavaScript -->
+                </div>
+              </div>
+
+              <!-- Step 3: Meeting Details -->
+              <div class="scheduler-step d-none" id="detailsStep">
+                <div class="step-header">
+                  <button type="button" class="btn btn-sm btn-link p-0 mb-2" id="backToTime">
+                    <i class="bi bi-arrow-left me-1"></i>
+                    Cambiar horario
+                  </button>
+                  <h6 class="step-title">3. Información de contacto</h6>
+                  <p class="step-subtitle">Para enviarte los detalles de la reunión</p>
+                </div>
+                
+                <form id="meetingDetailsForm">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="meetingName" name="name" required>
+                        <label for="meetingName">Nombre completo *</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="meetingEmail" name="email" required>
+                        <label for="meetingEmail">Correo electrónico *</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input type="tel" class="form-control" id="meetingPhone" name="phone">
+                        <label for="meetingPhone">Teléfono (opcional)</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="meetingCompany" name="company">
+                        <label for="meetingCompany">Empresa (opcional)</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <select class="form-select" id="meetingPlan" name="plan">
+                        <option value="">Selecciona un plan de interés</option>
+                        <option value="lite">LITE</option>
+                        <option value="liteplus">LITE+</option>
+                        <option value="pro">PRO</option>
+                        <option value="custom">Plan personalizado</option>
+                      </select>
+                      <label for="meetingPlan">Plan de interés</label>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="meetingNotes" name="notes" style="height: 100px" placeholder="Cuéntanos brevemente sobre tu empresa y qué te gustaría conocer del sistema"></textarea>
+                      <label for="meetingNotes">Notas adicionales (opcional)</label>
+                    </div>
+                  </div>
+
+                  <!-- Meeting Summary -->
+                  <div class="meeting-summary">
+                    <h6 class="summary-title">
+                      <i class="bi bi-check-circle me-2"></i>
+                      Resumen de tu cita
+                    </h6>
+                    <div class="summary-content">
+                      <div class="summary-item">
+                        <i class="bi bi-calendar3"></i>
+                        <span id="summaryDate"></span>
+                      </div>
+                      <div class="summary-item">
+                        <i class="bi bi-clock"></i>
+                        <span id="summaryTime"></span>
+                      </div>
+                      <div class="summary-item">
+                        <i class="bi bi-camera-video"></i>
+                        <span>Reunión por Google Meet (el enlace se enviará por correo)</span>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <div class="modal-footer scheduler-modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" id="scheduleButton" disabled>
+                <i class="bi bi-calendar-check me-2"></i>
+                Confirmar Reunión
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="zonda-footer">
+        <div class="container align-items-center justify-content-center">
+          
+          <div class="row  align-items-center justify-content-center">
+            <!-- Logo y descripción -->
+            <div class="col-lg-8 col-md-6 mb-4">
+              <div class="footer-brand justify-content-center align-items-center text-center">
+                <img src="../img/LogotipoHorizontalBlanco.png" alt="ZONDA ERP" class="footer-logo mb-3">
+                <p class="footer-description">
+                  Somos un <strong>software especializado para empresas de control de plagas (SIMAP)</strong>,   
+                  que centraliza la gestión operativa, técnica y administrativa, 
+                  facilitando el seguimiento de servicios, clientes y cumplimiento normativo 
+                  desde una sola plataforma.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center justify-content-center ">
+            <!-- Información de contacto -->
+            <div class="col-lg-8 col-md-6 mb-4">
+              <div class="footer-contact">
+
+                <!-- Redes sociales -->
+                <div class="social-links mt-0 align-items-end">
+                  <a href="#" class="social-link facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-link instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="social-link youtube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="footer-copyright mb-0">
+                  <strong>zondaerp.com</strong> © | Todos los derechos reservados | 
+                  <a href="terminos-condiciones.html" class="footer-link">Términos y Condiciones</a> | 
+                  <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                </p>
+              </div>
+              <!-- <div class="col-md-2 text-md-end">
+                <button class="scroll-top-btn" onclick="scrollToTop()" aria-label="Volver arriba">
+                  ↑
+                </button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Contact Form Handler -->
+    <script src="../js/contac.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <!-- Google Calendar API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    
+    <!-- Meeting Scheduler -->
+    <script src="../js/scheduler.js"></script>
+
+  </body>
+</html>
