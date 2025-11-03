@@ -5,9 +5,9 @@ class MeetingScheduler {
         this.DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest';
         this.SCOPES = 'https://www.googleapis.com/auth/calendar';
         
-        //  values from Google Cloud Console
-        this.API_KEY = 'AIzaSyBHdTKoU4I4EWIUI2gunM2H9cWmhGlihGw';
-        this.CLIENT_ID = '406694722346-oiq2ou23pulg3fbg84mfqn5uto6jb0n3.apps.googleusercontent.com'; 
+        // Load API keys from config file (NOT committed to GitHub)
+        this.API_KEY = window.API_CONFIG?.GOOGLE_API_KEY || '';
+        this.CLIENT_ID = window.API_CONFIG?.GOOGLE_CLIENT_ID || ''; 
         
         // Business hours configuration (Mexico Time Zone)
         this.businessHours = {

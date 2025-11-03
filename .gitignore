@@ -1,2 +1,20 @@
+# Documentation files
 /GOOGLE_CALENDAR_SETUP.md
 /HELP_IMPLEMENTATION.md
+
+# API Keys and sensitive configuration
+js/config.js
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE and system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
