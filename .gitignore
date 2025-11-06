@@ -4,6 +4,7 @@
 
 # API Keys and sensitive configuration
 js/config.js
+api/credentials.json
 
 # Environment variables
 .env
