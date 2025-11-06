@@ -45,7 +45,7 @@
         });
       }
 
-      // WhatsApp Floating Button Enhancement
+      // WhatsApp Floating Button 
       document.addEventListener('DOMContentLoaded', function() {
         const whatsappButton = document.querySelector('.whatsapp-float');
         

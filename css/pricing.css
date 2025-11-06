@@ -37,7 +37,8 @@
     background-color: var(--color-fondo);
     border-radius: 25px;
     padding: 6px;
-    display: flex;
+    display: none;
+    /* display: flex; */
     position: relative;
 }
 
@@ -93,7 +94,7 @@
     /* border: 2px solid transparent;
     background: linear-gradient(white, white) padding-box,
                 linear-gradient(135deg, var(--color-terracotta), var(--color-deep-rose)) border-box; */
-    border: 2px solid var(--color-terracotta);
+    border: 3px solid var(--color-terracotta);
     transform: scale(1.05);
 }
 
@@ -242,6 +243,10 @@
 .liteplus-card .cta-button:hover {
     background-color: var(--color-light-blue);
     border-color: var(--color-light-blue);
+}
+
+.pro-card {
+    border: 3px solid var(--color-terracotta);
 }
 
 .pro-card .plan-name {

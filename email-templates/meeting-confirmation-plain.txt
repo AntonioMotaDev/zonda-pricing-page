@@ -1,0 +1,38 @@
+Hola {{client_name}},
+
+¡Tu reunión ha sido confirmada exitosamente! 🎉
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📅 DETALLES DE LA REUNIÓN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Fecha: {{meeting_date}}
+• Hora: {{meeting_time}}
+• Duración: {{meeting_duration}}
+• Zona horaria: {{meeting_timezone}}
+• Modalidad: Virtual por Google Meet
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤 TUS DATOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Nombre: {{client_name}}
+• Email: {{client_email}}
+• Teléfono: {{client_phone}}
+• Empresa: {{client_company}}
+• Plan de interés: {{client_plan}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Si necesitas reprogramar o tienes alguna pregunta, no dudes en contactarnos.
+
+¡Esperamos conocer más sobre tu empresa y cómo ZONDA ERP puede ayudarte!
+
+Saludos cordiales,
+Equipo ZONDA ERP
+🌐 https://zondaerp.com
+📧 zonda.desarrollo@gmail.com
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Fecha de solicitud: {{date}}

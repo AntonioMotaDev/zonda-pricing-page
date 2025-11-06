@@ -15,7 +15,7 @@ class ContactFormHandler {
         this.messageAlert = this.formMessage.querySelector('.alert');
         this.emailFallbackBtn = document.getElementById('emailFallbackBtn');
         
-        // Initialize EmailJS (reemplaza con tus credenciales)
+        // Initialize EmailJS 
         this.emailJSConfig = {
             publicKey: 'FVBRMeBcGeLym1gyx',        
             serviceId: 'service_99y7v5w',
