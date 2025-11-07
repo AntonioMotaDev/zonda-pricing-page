@@ -277,10 +277,44 @@
 
 /* Hero Section */
 .hero-section {
-    padding: 60px 0;
+    position: relative;
+    padding: 0 0;
     color: white;
-    /* background: radial-gradient(circle, rgba(29, 45, 131, 1) 0%, rgba(25, 42, 89, 1) 50%, rgba(24, 42, 65, 1) 100%); */
     margin-bottom: 0;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Full Page Video Background */
+.full-page-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Overlay for better text readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Content positioning */
+.hero-content {
+    position: relative;
+    z-index: 3;
 }
 
 .hero-section h1 {
@@ -346,12 +380,22 @@
         font-size: 2.5rem;
     }
 
+    .hero-section {
+        min-height: 300px;
+        padding: 40px 0;
+    }
+    
     .hero-section h1 {
         font-size: 2rem;
     }
 
     .hero-section h4 {
         font-size: 1.1rem;
+    }
+    
+    /* Ensure video covers properly on mobile */
+    .hero-video {
+        object-fit: cover;
     }
 
     /* Contact form responsive */
@@ -386,5 +430,35 @@
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(29, 45, 131, 0.2);
+}
+
+/* Fallback for devices with reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .full-page-video {
+        display: none;
+    }
+    
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(circle, rgba(29, 45, 131, 1) 0%, rgba(25, 42, 89, 1) 50%, rgba(24, 42, 65, 1) 100%);
+        z-index: -1;
+    }
+}
+
+/* Fallback background for when video is loading */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(29, 45, 131, 1) 0%, rgba(25, 42, 89, 1) 50%, rgba(24, 42, 65, 1) 100%);
+    z-index: -2;
 }
 
