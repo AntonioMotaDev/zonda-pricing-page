@@ -339,7 +339,7 @@
     width: 60px;
     height: 60px;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     background: linear-gradient(135deg, #25d366, #128c7e);
     color: white;
     border-radius: 50%;
@@ -505,7 +505,7 @@
 /* WhatsApp tooltip (optional enhancement) */
 .whatsapp-float .tooltip-text {
     position: absolute;
-    right: 70px;
+    left: 70px;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.8);

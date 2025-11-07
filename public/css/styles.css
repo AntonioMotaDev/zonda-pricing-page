@@ -73,7 +73,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--color-texto);
   /* background-color: var(--color-fondo);  */
@@ -87,11 +87,12 @@ header {
 }
 
 /* Header with video background */
-header.bg-dark-blue {
-  /* background-color: transparent !important; */
-  background-color: rgba(0, 0, 0, 0.5) !important;
-  position: relative;
-  z-index: 1010;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1,
@@ -100,33 +101,147 @@ h2 {
   margin-bottom: 4px;
 }
 
-.header-navbar {
-  position: sticky;
-  top: 0;
-  color: var(--color-dark-blue);
-  background-color: rgba(255, 255, 255, 1);
-  backdrop-filter: blur(10px);
-  padding-top: 0;
-  padding-bottom: 0;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  border-bottom: 2px solid var(--color-light-blue);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  margin-bottom: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 1.25rem;
-  z-index: 1020;
+/* Top contact bar - línea azul superior */
+.top-contact-bar {
+  background: linear-gradient(90deg, var(--color-dark-blue), var(--color-median-blue));
+  padding: 0px 80px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 800;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
 }
-.header-navbar a {
+
+.top-contact-bar .contact-info {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.top-contact-bar .contact-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.top-contact-bar .contact-link:hover {
+  color: var(--color-terracotta);
+}
+
+.top-contact-bar .contact-link i {
+  font-size: 19px;
+  color: var(--color-terracotta);
+}
+
+.top-contact-bar .social-links-top {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.top-contact-bar .social-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-terracotta);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.top-contact-bar .social-icon:hover {
+  background-color: var(--color-terracotta);
+  transform: translateY(-2px);
+}
+
+/* Navbar principal blanca */
+.header-navbar {
+  background-color: white;
+  padding: 10px 80px;
+  margin: 0;
+  height: 92px;
+  box-shadow: none;
+}
+
+.header-navbar .navbar-brand img {
+  transition: transform 3s ease;
+  height: auto;
+  width: 200px;
+}
+
+.header-navbar .nav-link {
   color: var(--color-dark-blue);
   text-decoration: none;
-  padding: 15px 20px;
-  display: inline-block;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
-.header-navbar a:hover {
+
+
+.header-navbar .nav-link:hover {
   color: var(--color-terracotta);
-  transition: color 0.3s ease;
+}
+
+.header-navbar .nav-link:hover::after {
+  width: 60%;
+}
+
+/* Botón DEMO GRATUITA */
+.btn-demo {
+  background: var(--color-light-blue);
+  color: white !important;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 1s ease;
+  border: none;
+}
+
+.btn-demo:hover {
+  background: linear-gradient(135deg, #d64736, var(--color-terracotta));
+  transition: all 1s ease;
+}
+
+.btn-demo::after {
+  display: none;
+}
+
+/* Línea terracotta inferior */
+.navbar-bottom-line {
+  height: 11px;
+  background: linear-gradient(90deg, var(--color-terracotta), #d64736);
+  box-shadow: 0 2px 8px rgba(194, 82, 63, 0.2);
+}
+
+/* Navbar toggler personalizado */
+.header-navbar .navbar-toggler {
+  border-color: var(--color-dark-blue);
+  padding: 8px 12px;
+}
+
+.header-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(19, 35, 54, 0.25);
+}
+
+.header-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2819, 35, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .comparacion {
@@ -425,6 +540,47 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Navbar responsive */
+  .top-contact-bar {
+    font-size: 0.75rem;
+    padding: 6px 0;
+  }
+
+  .top-contact-bar .contact-info {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .top-contact-bar .contact-link span {
+    font-size: 0.75rem;
+  }
+
+  .top-contact-bar .social-links-top {
+    margin-top: 5px;
+  }
+
+  .header-navbar {
+    padding: 8px 0;
+  }
+
+
+  .header-navbar .navbar-nav {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(19, 35, 54, 0.1);
+  }
+
+  .header-navbar .nav-item {
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .btn-demo {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -448,6 +604,35 @@ h2 {
 
   .toggle-all-modules-btn .toggle-icon {
     font-size: 0.6rem;
+  }
+
+  /* Navbar móvil pequeño */
+  .top-contact-bar .contact-info {
+    gap: 5px;
+  }
+
+  .top-contact-bar .contact-link {
+    gap: 5px;
+    font-size: 0.7rem;
+  }
+
+  .top-contact-bar .contact-link i {
+    font-size: 0.75rem;
+  }
+
+  .top-contact-bar .social-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+  }
+
+  .btn-demo {
+    font-size: 0.85rem;
+    padding: 8px 20px;
+  }
+
+  .navbar-bottom-line {
+    height: 3px;
   }
 }
 
@@ -998,4 +1183,34 @@ h2 {
 
 .mockup-card:nth-child(3) {
   animation-delay: 0.3s;
+}
+
+.header-navbar .navbar-nav {
+  gap: 2rem; /* Separación consistente entre items */
+}
+
+/* Línea vertical entre elementos, inicia a partir del segundo */
+.header-navbar .navbar-nav .nav-item + .nav-item {
+  position: relative;
+}
+
+.header-navbar .navbar-nav .nav-item + .nav-item::before {
+  content: "";
+  position: absolute;
+  left: -1rem; /* ubicamos la línea entre los items (coincide con gap) */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 22px;
+  background-color: rgba(19, 35, 54, 0.6); /* azul oscuro semi-transparente */
+}
+
+/* Responsive: en menú colapsado no mostramos separadores */
+@media (max-width: 991.98px) {
+  .header-navbar .navbar-nav {
+    gap: 0;
+  }
+  .header-navbar .navbar-nav .nav-item + .nav-item::before {
+    display: none;
+  }
 }
