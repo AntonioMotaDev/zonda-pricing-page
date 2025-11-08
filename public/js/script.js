@@ -37,6 +37,74 @@
         });
       });
 
+      class ScrollTopButtonObserver {
+        constructor() {
+          this.button = document.querySelector('.scroll-top-btn');
+          this.sentinel = document.createElement('div');
+          this.init();
+        }
+        
+        init() {
+          // Crear elemento centinela en el top
+          this.createSentinel();
+          this.setupObserver();
+          this.setupClickHandler();
+        }
+        
+        createSentinel() {
+          this.sentinel.style.cssText = `
+            position: absolute;
+            top: 100px;
+            width: 1px;
+            height: 1px;
+          `;
+          document.body.appendChild(this.sentinel);
+        }
+        
+        setupObserver() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              // Si el centinela es visible, estamos cerca del top
+              if (entry.isIntersecting) {
+                this.hideButton();
+              } else {
+                this.showButton();
+              }
+            });
+          }, {
+            rootMargin: '100px 0px 0px 0px',
+            threshold: 0
+          });
+          
+          observer.observe(this.sentinel);
+        }
+        
+        setupClickHandler() {
+          this.button.addEventListener('click', () => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+        
+        hideButton() {
+          this.button.style.opacity = '0';
+          this.button.style.pointerEvents = 'none';
+        }
+        
+        showButton() {
+          this.button.style.opacity = '1';
+          this.button.style.pointerEvents = 'auto';
+        }
+      }
+
+      // Inicializar
+      document.addEventListener('DOMContentLoaded', () => {
+        new ScrollTopButtonObserver();
+      });
+
+
       // Función para scroll hacia arriba
       function scrollToTop() {
         window.scrollTo({
@@ -107,7 +175,7 @@
             lastScrollY = currentScrollY;
           });
 
-          // Add tooltip functionality (if tooltip element exists)
+          // Add tooltip functionality 
           const tooltip = whatsappButton.querySelector('.tooltip-text');
           if (!tooltip) {
             // Create tooltip if it doesn't exist
@@ -172,7 +240,7 @@
           message = 'Hola, quisiera una explicación detallada de las funcionalidades de ZONDA ERP';
         } else if (currentHash === '#contact') {
           message = 'Hola, me gustaría agendar una reunión para conocer ZONDA ERP';
-        }
+        } 
         
         return encodeURIComponent(message);
       }

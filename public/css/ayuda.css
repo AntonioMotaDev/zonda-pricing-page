@@ -758,54 +758,7 @@
     }
 }
 
-/* WhatsApp Button Positioning for Help Page */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    animation: pulse-float 2s infinite;
-}
 
-.whatsapp-float:hover {
-    background-color: #128c7e;
-    color: #FFF;
-    transform: scale(1.1);
-    text-decoration: none;
-    animation: none;
-}
-
-@keyframes pulse-float {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
-    }
-}
 
 /* Additional animations and effects */
 .fade-in {
