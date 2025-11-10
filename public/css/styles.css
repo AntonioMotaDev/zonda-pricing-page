@@ -91,7 +91,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1020;
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -169,12 +169,15 @@ h2 {
 
 /* Navbar principal blanca */
 .header-navbar {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
+  /* background-color: red; */
   padding: 10px 80px;
   margin: 0;
   height: 92px;
   box-shadow: none;
 }
+
+
 
 .header-navbar .navbar-brand img {
   transition: transform 3s ease;
@@ -1282,4 +1285,9 @@ h2 {
   .header-navbar .navbar-nav .nav-item + .nav-item::before {
     display: none;
   }
+}
+
+.header-navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9) !important; /* Cambia el color de fondo a blanco */
+  transition: background-color 0.3s ease; /* Transición suave */
 }

@@ -56,19 +56,21 @@
       </div>
     </div>
 
-    <header class="bg-dark-blue">
+    <header>
+
+      <!-- Navbar principal blanca -->
       <nav class="navbar navbar-expand-lg header-navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="http://www.zondaerp.com">
-            <img src="img/LogotipoHorizontal.png" alt="ZONDA ERP" height="100">
+        <div class="container-fluid px-4">
+          <a class="navbar-brand" href="https://zondaerp.com">
+            <img src="img/LogotipoHorizontal.png" alt="ZONDA ERP" height="80">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="http://www.zondaerp.com">Inicio</a>
+                <a class="nav-link" href="https://zondaerp.com">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html#pricing">Planes</a>
@@ -82,13 +84,20 @@
               <li class="nav-item">
                 <a class="nav-link" href="ayuda.html">Ayuda</a>
               </li>
+              <li class="nav-item ms-3">
+                <a href="index.html#contact" class="btn btn-demo">
+                  <i class="fas fa-angle-double-right me-2"></i>
+                  DEMO GRATUITA
+                </a>
+              </li>
             </ul>
-          </div>
+          </div>      
         </div>
       </nav>
+
     </header>
     <!-- Línea terracotta inferior -->
-    <div class="navbar-bottom-line"></div>
+    <!-- <div class="navbar-bottom-line"></div> -->
 
     <!-- Hero Section -->
     <section class="terms-hero privacy-hero">
@@ -670,6 +679,8 @@
       // Initialize active state on page load
       document.addEventListener('DOMContentLoaded', updateActiveNav);
     </script>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

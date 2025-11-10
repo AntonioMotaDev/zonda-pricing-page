@@ -23,6 +23,16 @@
         });
       }
 
+      // Cambiar estilo del navbar al hacer scroll
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.header-navbar');
+        if (window.scrollY > 0) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
       // Smooth scroll para los links de navegación
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
