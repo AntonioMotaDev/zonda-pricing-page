@@ -25,10 +25,41 @@
   </head>
   
   <body>
+    <!-- Top bar azul con contacto y redes sociales -->
+    <div class="top-contact-bar">
+      <div class="container-fluid px-4">
+        <div class="d-flex justify-content-end align-items-center">
+          <!-- Información de contacto -->
+          <div class="contact-info">
+            <a href="mailto:contacto@zondaerp.com" class="contact-link">
+              <i class="fas fa-envelope"></i>
+              <span>contacto@zondaerp.com</span>
+            </a>
+            <a href="tel:+524448447798" class="contact-link">
+              <i class="fas fa-phone"></i>
+              <span>(+52) 444 844 77 98</span>
+            </a>
+          </div>
+          <!-- Redes sociales -->
+          <div class="social-links-top">
+            <a href="https://www.facebook.com/zondaerp" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/zonda_oficial/" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@ZondaERP" class="social-icon" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="bg-dark-blue">
       <nav class="navbar navbar-expand-lg header-navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="http://www.zondaerp.com">
             <img src="img/LogotipoHorizontal.png" alt="ZONDA ERP" height="100">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +68,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html#hero">Inicio</a>
+                <a class="nav-link" href="http://www.zondaerp.com">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html#pricing">Planes</a>
@@ -56,6 +87,8 @@
         </div>
       </nav>
     </header>
+    <!-- Línea terracotta inferior -->
+    <div class="navbar-bottom-line"></div>
 
     <!-- Hero Section -->
     <section class="terms-hero privacy-hero">
@@ -85,7 +118,7 @@
             <li><a href="#transferencias">9. Transferencias Internacionales</a></li>
             <li><a href="#retencion">10. Retención de Datos</a></li>
             <li><a href="#cambios">11. Cambios a esta Política</a></li>
-            <li><a href="#contacto-privacidad">12. Contacto</a></li>
+            <!-- <li><a href="#contacto-privacidad">12. Contacto</a></li> -->
           </ul>
         </div>
 
@@ -196,7 +229,7 @@
         <div id="compartir-datos" class="terms-section">
           <h2><i class="bi bi-share me-2"></i>4. Compartir Información</h2>
           <p>
-            No vendemos, rentamos o compartimos su información personal con terceros, excepto en las siguientes circunstancias:
+            No vendemos, compartimos su información personal con terceros, excepto en las siguientes circunstancias:
           </p>
 
           <h3>4.1 Proveedores de Servicios</h3>
@@ -263,7 +296,7 @@
             <li>Políticas y procedimientos de seguridad documentados</li>
             <li>Auditorías internas de seguridad periódicas</li>
           </ul>
-
+<!-- 
           <h3>5.2 Centros de Datos</h3>
           <p>
             Nuestros datos se almacenan en centros certificados con:
@@ -273,7 +306,7 @@
             <li>Control de acceso físico biométrico</li>
             <li>Sistemas de energía redundantes</li>
             <li>Monitoreo ambiental 24/7</li>
-          </ul>
+          </ul> -->
         </div>
 
         <!-- Sección 6: Derechos de los Usuarios -->
@@ -285,37 +318,37 @@
 
           <div class="rights-list">
             <div class="rights-item">
-              <h4><i class="bi bi-eye"></i>Derecho de Acceso</h4>
+              <h4><i class="bi bi-eye"></i> Derecho de Acceso</h4>
               <p>Solicitar información sobre qué datos personales tenemos y cómo los usamos.</p>
             </div>
             
             <div class="rights-item">
-              <h4><i class="bi bi-pencil-square"></i>Derecho de Rectificación</h4>
+              <h4><i class="bi bi-pencil-square"></i> Derecho de Rectificación</h4>
               <p>Solicitar la corrección de datos personales inexactos o incompletos.</p>
             </div>
             
             <div class="rights-item">
-              <h4><i class="bi bi-trash"></i>Derecho de Cancelación</h4>
+              <h4><i class="bi bi-trash"></i> Derecho de Cancelación</h4>
               <p>Solicitar la eliminación de sus datos personales cuando no sean necesarios.</p>
             </div>
             
             <div class="rights-item">
-              <h4><i class="bi bi-hand-thumbs-down"></i>Derecho de Oposición</h4>
+              <h4><i class="bi bi-hand-thumbs-down"></i> Derecho de Oposición</h4>
               <p>Oponerse al tratamiento de sus datos para fines específicos.</p>
             </div>
             
             <div class="rights-item">
-              <h4><i class="bi bi-download"></i>Portabilidad de Datos</h4>
+              <h4><i class="bi bi-download"></i> Portabilidad de Datos</h4>
               <p>Solicitar una copia de sus datos en formato estructurado y portable.</p>
             </div>
             
             <div class="rights-item">
-              <h4><i class="bi bi-x-circle"></i>Revocación de Consentimiento</h4>
+              <h4><i class="bi bi-x-circle"></i> Revocación de Consentimiento</h4>
               <p>Retirar su consentimiento para el tratamiento de datos en cualquier momento.</p>
             </div>
           </div>
 
-          <h3>6.1 Ejercicio de Derechos</h3>
+          <!-- <h3>6.1 Ejercicio de Derechos</h3>
           <p>
             Para ejercer sus derechos ARCO, puede:
           </p>
@@ -327,7 +360,7 @@
 
           <div class="highlight-box">
             <p><strong>Tiempo de respuesta:</strong> Responderemos su solicitud dentro de 20 días hábiles según la LFPDPPP.</p>
-          </div>
+          </div> -->
         </div>
 
         <!-- Sección 7: Cookies y Tecnologías -->
@@ -435,7 +468,7 @@
         </div>
 
         <!-- Sección 12: Contacto -->
-        <div id="contacto-privacidad" class="terms-section">
+        <!-- <div id="contacto-privacidad" class="terms-section">
           <h2><i class="bi bi-envelope-at me-2"></i>12. Contacto</h2>
           <p>
             Para consultas relacionadas con privacidad y protección de datos, puede contactarnos:
@@ -469,7 +502,7 @@
             <p><strong>DPO:</strong> [Nombre del Responsable] | <strong>Email:</strong> dpo@zondaerp.com</p>
             <p>Disponible para consultas especializadas sobre tratamiento de datos personales.</p>
           </div>
-        </div>
+        </div> -->
 
         <!-- Call to Action -->
         <div class="contact-cta">
@@ -484,38 +517,59 @@
     </section>
 
     <!-- Back to Home Button -->
-    <a href="index.html" class="back-to-home" aria-label="Volver al inicio">
+    <!-- <a href="index.html" class="back-to-home" aria-label="Volver al inicio">
       <i class="bi bi-house-fill"></i>
-    </a>
+    </a> -->
 
     <!-- Footer -->
     <footer class="zonda-footer">
-      <div class="container align-items-center justify-content-center">
+      <div class="container footer-top">
         
-        <div class="row  align-items-center justify-content-center">
+        <div class="row align-items-start">
           <!-- Logo y descripción -->
-          <div class="col-lg-8 col-md-6 mb-4">
-            <div class="footer-brand justify-content-center align-items-center text-center">
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="footer-brand">
               <img src="img/LogotipoHorizontalBlanco.png" alt="ZONDA ERP" class="footer-logo mb-3">
               <p class="footer-description">
-                Somos un <strong>software especializado para empresas de control de plagas (SIMAP)</strong>,   
-                que centraliza la gestión operativa, técnica y administrativa, 
-                facilitando el seguimiento de servicios, clientes y cumplimiento normativo 
-                desde una sola plataforma.
+                Somos un <strong>software especializado para empresas de control de plagas (SIMAP)</strong>, que centraliza la gestión operativa, técnica y administrativa, facilitando el seguimiento de servicios, clientes y cumplimiento normativo desde una sola plataforma.
               </p>
             </div>
           </div>
-        </div>
 
-        <div class="row align-items-center justify-content-center ">
           <!-- Información de contacto -->
-          <div class="col-lg-8 col-md-6 mb-4">
+          <div class="col-lg-6 col-md-6 mb-4">
             <div class="footer-contact">
+              <h3 class="footer-contact-title mb-4">Contacto:</h3>
+              
+              <!-- Mapa -->
+              <div class="footer-map mb-3">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.9956347812156!2d-101.4544!3d25.5428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDMyJzM0LjEiTiAxMDHCsDI3JzE1LjgiVw!5e0!3m2!1ses!2smx!4v1234567890"
+                  width="100%" 
+                  height="200" 
+                  style="border:0; border-radius: 8px;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              
+              <!-- Información de contacto -->
+              <div class="footer-contact-info mb-3">
+                <div class="contact-item mb-2">
+                  <i class="bi bi-telephone-fill me-2"></i>
+                  <a href="tel:+524448447798" class="contact-link">(+52) 444 844 77 98</a>
+                </div>
+                <div class="contact-item mb-3">
+                  <i class="bi bi-envelope-fill me-2"></i>
+                  <a href="mailto:contacto@zondaerp.com" class="contact-link">contacto@zondaerp.com</a>
+                </div>
+              </div>
 
               <!-- Redes sociales -->
-              <div class="social-links mt-0 align-items-end">
+              <div class="social-links">
                 <a href="#" class="social-link facebook" aria-label="Facebook">
-                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-facebook"></i>
                 </a>
                 <a href="#" class="social-link instagram" aria-label="Instagram">
                   <i class="fab fa-instagram"></i>
@@ -541,15 +595,14 @@
                 <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
               </p>
             </div>
-            <!-- <div class="col-md-2 text-md-end">
-              <button class="scroll-top-btn" onclick="scrollToTop()" aria-label="Volver arriba">
-                ↑
-              </button>
-            </div> -->
           </div>
         </div>
       </div>
     </footer>
+
+    <button class="scroll-top-btn" onclick="scrollToTop()" aria-label="Volver arriba">
+        ↑
+    </button>
 
     <!-- Bootstrap JavaScript -->
     <script
