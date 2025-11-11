@@ -74,16 +74,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
               <li class="nav-item">
-                <a class="nav-link" href="https://zondaerp.com">Inicio</a>
+                <a class="nav-link" href="https://zondaerp.com">Regresar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#pricing">Planes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#comparative">Comparativa</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contacto</a>
+                <a class="nav-link" href="#contact">Comprar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="ayuda.html">Ayuda</a>
@@ -294,25 +291,31 @@
             
             <div class="mockups-grid">
 
-              <div class="mockup-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="mockup-card" data-aos="fade-up" data-aos-delay="300" onclick="openGalleryModal('escritorio')">
                 <div class="mockup-image-wrapper">
                   <img src="img/compuZonda.png" alt="Computadora de Zonda ERP" class="mockup-img"/>
                   <div class="mockup-overlay">
                     <div class="mockup-info">
-                      <h4>Escritorio</h4>
+                      <h4>Servicio Web</h4>
                       <p>Versión completa para administración</p>
+                      <small style="display: block; margin-top: 10px; opacity: 0.9;">
+                        <i class="fas fa-images"></i> Click para ver galería
+                      </small>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="mockup-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="mockup-card" data-aos="fade-up" data-aos-delay="200" onclick="openGalleryModal('appMovil')">
                 <div class="mockup-image-wrapper">
                   <img src="img/appZonda.png" alt="Aplicación de Zonda ERP" class="mockup-img"/>
                   <div class="mockup-overlay">
                     <div class="mockup-info">
                       <h4>App Móvil</h4>
                       <p>Control total en campo para tus técnicos</p>
+                      <small style="display: block; margin-top: 10px; opacity: 0.9;">
+                        <i class="fas fa-images"></i> Click para ver galería
+                      </small>
                     </div>
                   </div>
                 </div>
@@ -1060,6 +1063,33 @@
       <button class="scroll-top-btn" onclick="scrollToTop()" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
       </button>
+
+      <!-- Modal de Galería -->
+      <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+          <span class="gallery-close" onclick="closeGalleryModal()">&times;</span>
+          <h3 id="galleryTitle" class="gallery-title"></h3>
+          
+          <div class="gallery-container">
+            <button class="gallery-nav prev" onclick="changeImage(-1)">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="gallery-image-wrapper">
+              <img id="galleryImage" src="" alt="Imagen de galería" class="gallery-image">
+              <div class="gallery-counter">
+                <span id="currentImage">1</span> / <span id="totalImages">1</span>
+              </div>
+            </div>
+            
+            <button class="gallery-nav next" onclick="changeImage(1)">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          
+          <div class="gallery-thumbnails" id="galleryThumbnails"></div>
+        </div>
+      </div>
     </main>
 
     <!-- Bootstrap JavaScript -->

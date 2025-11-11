@@ -1298,3 +1298,241 @@ h2 {
   animation-delay: 0.3s;
 }
 
+/* ========================================
+   GALLERY MODAL
+   ======================================== */
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.95);
+  animation: fadeIn 0.3s ease;
+}
+
+.gallery-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-content {
+  position: relative;
+  background-color: transparent;
+  margin: auto;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 1200px;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.gallery-close:hover,
+.gallery-close:focus {
+  color: var(--color-terracotta);
+  transform: scale(1.1);
+}
+
+.gallery-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-counter {
+  color: white;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.gallery-nav {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 20px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gallery-nav:hover {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  transform: scale(1.1);
+}
+
+.gallery-nav:active {
+  transform: scale(0.95);
+}
+
+.gallery-nav.prev {
+  margin-right: auto;
+}
+
+.gallery-nav.next {
+  margin-left: auto;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.gallery-thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.gallery-thumbnail.active {
+  border-color: var(--color-terracotta);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-modal-content {
+    padding: 20px 10px;
+    width: 95%;
+  }
+
+  .gallery-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    padding: 15px 10px;
+    font-size: 1.2rem;
+  }
+
+  .gallery-nav.prev {
+    left: 10px;
+    margin-right: 0;
+  }
+
+  .gallery-nav.next {
+    right: 10px;
+    margin-left: 0;
+  }
+
+  .gallery-image {
+    max-height: 60vh;
+  }
+
+  .gallery-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .gallery-close {
+    font-size: 35px;
+    right: 15px;
+  }
+}
+
+/* Make mockup cards clickable */
+.mockup-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mockup-card:hover {
+  transform: translateY(-8px);
+}
+

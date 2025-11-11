@@ -452,3 +452,189 @@ document.addEventListener("DOMContentLoaded", function () {
     moduleObserver.observe(modulo);
   });
 });
+
+// ========================================
+// GALLERY MODAL FUNCTIONALITY
+// ========================================
+
+let currentGalleryIndex = 0;
+let galleryImages = [];
+let galleryType = '';
+
+// Gallery image data - Add your images here
+const galleryData = {
+  escritorio: [
+    'img/escritorio/Dashboard.png',
+    'img/escritorio/CRM-ServiciosPorCliente.png',
+    'img/escritorio/CRM-PlanoLayout.png',
+    'img/escritorio/CRM-ListaDeClientes.png',
+    'img/escritorio/CRM-GraficaDeClientes.png',
+    'img/escritorio/CRM-ExportarPlano.png',
+    'img/escritorio/CRM-DetallesDelCliente.png',
+    'img/escritorio/CRM-CronogramaTecnicos.png',
+    'img/escritorio/CRM-CronogramaActividades.png',
+    'img/escritorio/ERP-Almacenes.png',
+    'img/escritorio/ERP-Lotes.png',
+    'img/escritorio/ERP-MovimientosAlmacenFirmas.png',
+    'img/escritorio/ERP-Productos.png',
+    'img/escritorio/RRHH-Dashboard.png',
+    'img/escritorio/SistemaClientes-ReportesClientes.png',
+  ],
+  appMovil: [
+    'img/appMovil/AppZonda1.jpeg',
+    'img/appMovil/AppZonda2.jpeg',
+    'img/appMovil/AppZonda3.jpeg',
+    'img/appMovil/AppZonda4.jpeg',
+    'img/appMovil/AppZonda5.jpeg',
+    'img/appMovil/AppZonda6.jpeg'
+  ]
+};
+
+// Function to load images from a folder dynamically
+async function loadGalleryImages(folder) {
+  // First, check if we have predefined images
+  if (galleryData[folder] && galleryData[folder].length > 0) {
+    return galleryData[folder];
+  }
+  
+  // Try to load images dynamically as fallback
+  try {
+    const response = await fetch(`img/${folder}/`);
+    
+    if (!response.ok) {
+      console.log(`No se pudo cargar la carpeta ${folder}`);
+      return [];
+    }
+    
+    const text = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const links = doc.querySelectorAll('a');
+    
+    const images = [];
+    links.forEach(link => {
+      let href = link.getAttribute('href');
+      if (href && /\.(jpg|jpeg|png|gif|webp)$/i.test(href)) {
+        // Clean up the href - remove any leading path components
+        const filename = href.split('/').pop();
+        images.push(`img/${folder}/${filename}`);
+      }
+    });
+    
+    return images;
+  } catch (error) {
+    console.error(`Error al cargar imágenes de ${folder}:`, error);
+    return [];
+  }
+}
+
+// Open gallery modal
+async function openGalleryModal(type) {
+  galleryType = type;
+  
+  // Load images (will use predefined data first, then try dynamic loading)
+  galleryImages = await loadGalleryImages(type);
+  
+  if (galleryImages.length === 0) {
+    alert('No hay imágenes disponibles en esta galería aún. Por favor, agrega imágenes al array galleryData[\'' + type + '\'] en script.js');
+    return;
+  }
+  
+  currentGalleryIndex = 0;
+  
+  const modal = document.getElementById('galleryModal');
+  const title = document.getElementById('galleryTitle');
+  
+  title.textContent = type === 'escritorio' ? 'Galería - Servicio Web' : 'Galería - App Móvil';
+  
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  displayImage();
+  createThumbnails();
+}
+
+// Close gallery modal
+function closeGalleryModal() {
+  const modal = document.getElementById('galleryModal');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+  galleryImages = [];
+  currentGalleryIndex = 0;
+}
+
+// Display current image
+function displayImage() {
+  if (galleryImages.length === 0) return;
+  
+  const img = document.getElementById('galleryImage');
+  const currentSpan = document.getElementById('currentImage');
+  const totalSpan = document.getElementById('totalImages');
+  
+  img.src = galleryImages[currentGalleryIndex];
+  currentSpan.textContent = currentGalleryIndex + 1;
+  totalSpan.textContent = galleryImages.length;
+  
+  // Update active thumbnail
+  document.querySelectorAll('.gallery-thumbnail').forEach((thumb, index) => {
+    if (index === currentGalleryIndex) {
+      thumb.classList.add('active');
+    } else {
+      thumb.classList.remove('active');
+    }
+  });
+}
+
+// Change image (next/previous)
+function changeImage(direction) {
+  currentGalleryIndex += direction;
+  
+  if (currentGalleryIndex < 0) {
+    currentGalleryIndex = galleryImages.length - 1;
+  } else if (currentGalleryIndex >= galleryImages.length) {
+    currentGalleryIndex = 0;
+  }
+  
+  displayImage();
+}
+
+// Create thumbnail navigation
+function createThumbnails() {
+  const container = document.getElementById('galleryThumbnails');
+  container.innerHTML = '';
+  
+  galleryImages.forEach((imgSrc, index) => {
+    const thumb = document.createElement('img');
+    thumb.src = imgSrc;
+    thumb.classList.add('gallery-thumbnail');
+    if (index === 0) thumb.classList.add('active');
+    
+    thumb.addEventListener('click', () => {
+      currentGalleryIndex = index;
+      displayImage();
+    });
+    
+    container.appendChild(thumb);
+  });
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+  const modal = document.getElementById('galleryModal');
+  if (!modal.classList.contains('active')) return;
+  
+  if (e.key === 'Escape') {
+    closeGalleryModal();
+  } else if (e.key === 'ArrowLeft') {
+    changeImage(-1);
+  } else if (e.key === 'ArrowRight') {
+    changeImage(1);
+  }
+});
+
+// Close modal when clicking outside
+document.getElementById('galleryModal').addEventListener('click', (e) => {
+  if (e.target.id === 'galleryModal') {
+    closeGalleryModal();
+  }
+});
