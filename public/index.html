@@ -69,7 +69,7 @@
             <img src="img/LogotipoHorizontal.png" alt="ZONDA ERP" height="80">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto align-items-center">
@@ -88,14 +88,20 @@
               <li class="nav-item">
                 <a class="nav-link" href="ayuda.html">Ayuda</a>
               </li>
-              <li class="nav-item ms-3">
+              <!-- <li class="nav-item ms-3">
                 <a href="#contact" class="btn btn-demo">
                   <i class="fas fa-angle-double-right me-2"></i>
                   DEMO GRATUITA
                 </a>
-              </li>
+              </li> -->
             </ul>
-          </div>      
+          </div>
+          <div class="navbar-btn"> 
+            <a href="#contact" class="btn btn-demo">
+              <i class="fas fa-angle-double-right me-2"></i>
+              DEMO GRATUITA
+            </a> 
+          </div>    
         </div>
       </nav>
 
@@ -155,13 +161,12 @@
               <h2 class="plan-name">LITE</h2>
 
               <div class="price">
-                <div class="price-amount" data-monthly="$6,999" data-yearly="$69,990">$6,999</div>
+                <div class="price-amount" data-monthly="$6,999" data-yearly="$69,990">$7,000<span style="font-size: x-small;">(2 GB)</span></div>
                 <div class="price-period">/mes</div>
               </div>
-              <p class="plan-billed">A contrato por 6 meses</p>
               <p class="plan-description">Para empresas y negocios que buscan gestionar sus operaciones en crecimiento</p>
 
-              <a href="#contact" class="cta-button">Comprar</a>
+              <a href="#contact" class="cta-button">Comprar *</a>
 
               <hr>
               
@@ -172,7 +177,7 @@
                 </li>
                 <li>
                   <span class="check-icon">✓</span>
-                  <span>Planificación de servicios con calendario</span>
+                  <span>Agenda y planificación de servicios</span>
                 </li>
                 <li>
                   <span class="check-icon">✓</span>
@@ -180,21 +185,11 @@
                 </li>
                 <li>
                   <span class="check-icon">✓</span>
-                  <span>Catálogo de servicios y plagas</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
                   <span>Control de inventario (1 almacén)</span>
                 </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Portal de clientes (2GB)</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>3 cuentas incluidas</span>
-                </li>
               </ul>
+
+              <p class="plan-billed">* Precio a contrato por 6 meses</p>
 
             </div>
 
@@ -203,13 +198,12 @@
               <div class="popular-badge">Más Popular</div>
               <h2 class="plan-name">LITE <span class="text-terracotta">+</span> </h2>
               <div class="price">
-                <div class="price-amount" data-monthly="$8,999" data-yearly="$89,990">$8,999</div>
+                <div class="price-amount" data-monthly="$8,999" data-yearly="$89,990">$9,000<span style="font-size: x-small;">(5 GB)</span></div>
                 <div class="price-period">/mes</div>
               </div>
-              <p class="plan-billed">A contrato por 6 meses</p>
               <p class="plan-description">Para empresas en crecimiento que necesitan funcionalidades avanzadas y mejor control</p>
 
-              <a href="#contact" class="cta-button">Comprar</a>
+              <a href="#contact" class="cta-button">Comprar *</a>
 
               <hr>
 
@@ -234,15 +228,9 @@
                   <span class="check-icon">✓</span>
                   <span>Control de almacén por técnico</span>
                 </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Portal de clientes (5GB)</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>6 cuentas incluidas</span>
-                </li>
               </ul>
+
+              <p class="plan-billed">* Precio a contrato por 6 meses</p>
 
             </div>
 
@@ -251,13 +239,12 @@
               <h2 class="plan-name">PRO</h2>
 
               <div class="price">
-                <div class="price-amount" data-monthly="$16,999" data-yearly="$XXXX">$16,999</div>
+                <div class="price-amount" data-monthly="$16,999" data-yearly="$XXXX">$17,000<span style="font-size: x-small;">(10 GB)</span></div>
                 <div class="price-period">/mes</div>
               </div>
-              <p class="plan-billed">A contrato por 6 meses</p>
               <p class="plan-description">Para empresas establecidas que requieren funcionalidad y análisis avanzado</p>
 
-              <a href="#contact" class="cta-button">Comprar</a>
+              <a href="#contact" class="cta-button">Comprar *</a>
               
               <hr>
 
@@ -282,18 +269,20 @@
                   <span class="check-icon">✓</span>
                   <span>Control avanzado de inventario</span>
                 </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Portal de clientes (10GB)</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>9 cuentas incluidas</span>
-                </li>
               </ul>
+
+              <p class="plan-billed">* Precio a contrato por 6 meses</p>
             
             </div>
 
+          </div>
+
+          <!-- Botón de comparación -->
+          <div class="comparative-button-wrapper">
+            <a href="#comparative" class="btn comparative-btn btn-lg">
+              <i class="bi bi-clipboard-check me-2"></i>
+              Ver Comparativa Detallada
+            </a>
           </div>
 
           <!-- Mockups Section -->

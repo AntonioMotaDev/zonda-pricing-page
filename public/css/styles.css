@@ -1,3 +1,9 @@
+/* ========================================
+   ZONDA - STYLES.CSS
+   Optimized CSS - v2.0
+   ======================================== */
+
+/* CSS Variables */
 :root {
   --color-basico: #c2523f;
   --color-no-basico: #df1a38;
@@ -15,6 +21,10 @@
   --color-deep-rose: #9e4653;
   --color-terracotta: #c2523f;
 }
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
 
 .text-dark-blue {
   color: var(--color-dark-blue);
@@ -66,6 +76,9 @@
   border-bottom-right-radius: 4px;
 }
 
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -75,23 +88,16 @@
 body {
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-    color: var(--color-texto);
-    /* background-color: var(--color-fondo);  */
+  color: var(--color-texto);
   background-color: var(--color-dark-blue);
-  padding: 0px;
+  padding: 0;
 }
 
-header {
-  text-align: center;
-  /* margin-bottom: 30px; */
-}
-
-/* Header with video background */
 header {
   position: sticky;
   top: 0;
   z-index: 1020;
-  /* background-color: white; */
+  text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -101,18 +107,21 @@ h2 {
   margin-bottom: 4px;
 }
 
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
+
 /* Top contact bar - línea azul superior */
 .top-contact-bar {
   background: linear-gradient(90deg, var(--color-dark-blue), var(--color-median-blue));
-  padding: 0px 80px;
+  padding: 0 80px;
   color: white;
   font-size: 0.85rem;
   font-weight: 800;
   height: 70px;
   display: flex;
   align-items: center;
-  justify-content: end;
-
+  justify-content: flex-end;
 }
 
 .top-contact-bar .contact-info {
@@ -169,12 +178,10 @@ h2 {
 
 /* Navbar principal blanca */
 .header-navbar {
-  background-color: rgba(255, 255, 255, 1);
-  /* background-color: red; */
+  background-color: white;
   padding: 10px 80px;
   margin: 0;
   height: 92px;
-  box-shadow: none;
 }
 
 
@@ -204,11 +211,22 @@ h2 {
   width: 60%;
 }
 
+.navbar-collapse {
+  justify-content: center;
+
+}
+
+.navbar-btn {
+  position: relative;
+}
+
 /* Botón DEMO GRATUITA */
 .btn-demo {
   background: var(--color-light-blue);
   color: white !important;
   padding: 10px 25px;
+  margin-left: 20px;
+  margin-right: 20px;
   border-radius: 25px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -235,7 +253,6 @@ h2 {
 
 /* Navbar toggler personalizado */
 .header-navbar .navbar-toggler {
-  border-color: var(--color-dark-blue);
   padding: 8px 12px;
 }
 
@@ -244,18 +261,68 @@ h2 {
 }
 
 .header-navbar .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2819, 35, 54, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+
+.header-navbar .navbar-nav {
+  gap: 2rem; /* Separación consistente entre items */
+}
+
+/* Línea vertical entre elementos, inicia a partir del segundo */
+.header-navbar .navbar-nav .nav-item + .nav-item {
+  position: relative;
+}
+
+.header-navbar .navbar-nav .nav-item + .nav-item::before {
+  content: "";
+  position: absolute;
+  left: -1rem; /* ubicamos la línea entre los items (coincide con gap) */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 22px;
+  background-color: rgba(19, 35, 54, 0.6); /* azul oscuro semi-transparente */
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet y menú colapsado */
+@media (max-width: 991.98px) {
+  .header-navbar .navbar-nav {
+    gap: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .header-navbar .navbar-btn {
+    width: 100%;
+  }
+  
+  .header-navbar .navbar-nav .nav-item + .nav-item::before {
+    display: none;
+  }
+}
+
+.header-navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* ========================================
+   COMPARISON SECTION
+   ======================================== */
 .comparacion {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  padding: 0 90px 30px 90px;
+  padding: 0 10vw 30px 10vw;
   margin: 0;
-  /* background-image: url('../img/bkgrnd.avif'); */
-  /* background-size: cover; */
   background: linear-gradient(180deg, white, var(--color-fondo));
 }
 
@@ -263,10 +330,9 @@ h2 {
   flex: 1;
   min-width: 300px;
   max-width: 600px;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   background-color: white;
-        border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -285,13 +351,15 @@ h2 {
   );
 }
 .sistema-basico {
-    border: 1px solid rgba(12, 47, 246, 0.3);
+  border: 1px solid rgba(12, 47, 246, 0.3);
 }
+
 .sistema-liteplus {
-    border: 1px solid rgba(9, 30, 149, 0.3);
+  border: 1px solid rgba(9, 30, 149, 0.3);
 }
+
 .sistema-pro {
-    border: 1px solid rgba(213, 115, 35, 0.3);
+  border: 1px solid rgba(213, 115, 35, 0.3);
 }
 
 .sistema-liteplus .sistema-header {
@@ -362,25 +430,9 @@ h2 {
 }
 
 .modulo {
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-/* .modulo.crm {
-    height: 300px;
-  }
-  .modulo.erp {
-    height: 540px;
-  }
-  .modulo.calidad {
-    height: 600px;
-  }
-  .modulo.inventario {
-    height: 550px;
-  }
-  .modulo.rrhh {
-    height: 420px;
-  } */
 
 .modulo:last-child {
   border-bottom: none;
@@ -390,9 +442,7 @@ h2 {
   font-weight: bold;
   margin-bottom: 2px;
   padding: 8px 15px;
-  /* background-color: #f1f1f1; */
   background-color: #07368222;
-  /* background: linear-gradient(0deg, var(--color-light-blue), var(--color-light-blue)); */
   cursor: pointer;
   transition: all 0.3s ease;
   user-select: none;
@@ -499,8 +549,9 @@ h2 {
   color: #333;
 }
 
-/* Responsive improvements */
+/* Tablet y móvil */
 @media (max-width: 768px) {
+  /* Comparación de sistemas */
   .comparacion {
     flex-direction: column;
     align-items: center;
@@ -520,7 +571,7 @@ h2 {
     font-size: 0.7rem;
   }
 
-  /* Toggle button responsive */
+  /* Toggle button */
   .toggle-all-modules-btn {
     position: static;
     transform: none;
@@ -544,7 +595,7 @@ h2 {
     align-items: center;
   }
 
-  /* Navbar responsive */
+  /* Header y navbar */
   .top-contact-bar {
     font-size: 0.75rem;
     padding: 6px 0;
@@ -568,7 +619,6 @@ h2 {
     padding: 8px 0;
   }
 
-
   .header-navbar .navbar-nav {
     margin-top: 15px;
     padding-top: 15px;
@@ -584,9 +634,90 @@ h2 {
     width: 100%;
     margin-top: 10px;
   }
+  
+  /* Footer */
+  .zonda-footer {
+    padding: 40px 0 0 0;
+  }
+
+  .footer-logo {
+    max-width: 150px;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-bottom .row {
+    text-align: center;
+  }
+
+  .footer-bottom .col-md-4 {
+    margin-top: 15px;
+  }
+
+  /* Formulario de contacto */
+  .contact-form-wrapper {
+    padding: 25px 20px;
+  }
+
+  .contact-submit-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .contact-info-card {
+    margin-bottom: 20px;
+  }
+
+  /* Mockups */
+  .mockups-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .mockup-card {
+    max-width: 100% !important;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 576px) {
+  /* Formulario de contacto */
+  .contact-form-wrapper {
+    padding: 20px 15px;
+  }
+
+  .contact-form .form-floating > .form-control,
+  .contact-form .form-floating > .form-select {
+    font-size: 0.9rem;
+  }
+
+  .contact-submit-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  /* Mockups */
+  .mockups-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .mockup-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .mockup-info p {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
+  /* Módulos */
   .modulo-titulo {
     font-size: 0.85rem;
     padding: 10px 12px;
@@ -599,6 +730,7 @@ h2 {
     padding: 8px 12px;
   }
 
+  /* Toggle button */
   .toggle-all-modules-btn {
     font-size: 0.65rem;
     padding: 4px 10px;
@@ -639,13 +771,11 @@ h2 {
   }
 }
 
-/* Footer Styles */
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
 .zonda-footer {
-  background: linear-gradient(
-    180deg,
-    var(--color-dark-blue) 30%,
-    black
-  );
+  background: linear-gradient(180deg, var(--color-dark-blue) 30%, black);
   padding: 60px 0 0 0;
 }
 
@@ -677,8 +807,7 @@ h2 {
 }
 
 .footer-description strong {
-  /* color: var(--color-terracotta); */
- color: white;
+  color: white;
 }
 
 .footer-title {
@@ -764,20 +893,9 @@ h2 {
   font-size: 1rem;
 }
 
-.social-link.facebook {
-  /* background-color: #3b5998; */
-  background-color: var(--color-terracotta);
-  color: white;
-}
-
-.social-link.instagram {
-  /* background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); */
-  background-color: var(--color-terracotta);
-  color: white;
-}
-
+.social-link.facebook,
+.social-link.instagram,
 .social-link.youtube {
-  /* background-color: #ff0000; */
   background-color: var(--color-terracotta);
   color: white;
 }
@@ -833,10 +951,11 @@ h2 {
 
 .scroll-top-btn:hover {
   background-color: var(--color-median-blue);
-  /* transform: translateY(-2px); */
 }
 
-/* Contact Form Styles */
+/* ========================================
+   CONTACT FORM STYLES
+   ======================================== */
 .contact-form-wrapper {
   background: white;
   padding: 40px;
@@ -961,7 +1080,9 @@ h2 {
   border-left: 4px solid #dc3545;
 }
 
-/* Contact Info Cards */
+/* ========================================
+   CONTACT INFO CARDS
+   ======================================== */
 .contact-info-card {
   background: rgba(255, 255, 255, 0.9);
   padding: 30px 20px;
@@ -1033,87 +1154,9 @@ h2 {
   margin-top: 5px;
 }
 
-/* Responsive footer */
-@media (max-width: 768px) {
-  .zonda-footer {
-    padding: 40px 0 0 0;
-  }
-
-  .footer-logo {
-    max-width: 150px;
-  }
-
-  .footer-description {
-    font-size: 0.9rem;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-
-  .footer-bottom .row {
-    text-align: center;
-  }
-
-  .footer-bottom .col-md-4 {
-    margin-top: 15px;
-  }
-
-  /* Contact form responsive */
-  .contact-form-wrapper {
-    padding: 25px 20px;
-  }
-
-  .contact-submit-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .contact-info-card {
-    margin-bottom: 20px;
-  }
-
-
-  /* Mockups responsive */
-  .mockups-grid {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
-  }
-
-  .mockup-card {
-    max-width: 100% !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-form-wrapper {
-    padding: 20px 15px;
-  }
-
-  .contact-form .form-floating > .form-control,
-  .contact-form .form-floating > .form-select {
-    font-size: 0.9rem;
-  }
-
-  .contact-submit-btn {
-    padding: 12px 30px;
-    font-size: 1rem;
-  }
-
-  .mockups-header h3 {
-    font-size: 1.8rem;
-  }
-
-  .mockup-info h4 {
-    font-size: 1.1rem;
-  }
-
-  .mockup-info p {
-    font-size: 0.85rem;
-  }
-}
-
-/* Mockups Section Styles */
+/* ========================================
+   MOCKUPS SECTION STYLES
+   ======================================== */
 .mockups-section {
   margin-top: 80px;
   margin-bottom: 60px;
@@ -1153,7 +1196,6 @@ h2 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  /* background: rgba(255, 255, 255, 0); */
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   max-width: 450px;
@@ -1171,7 +1213,6 @@ h2 {
   width: 100%;
   padding-bottom: 75%; /* Aspect ratio 4:3 */
   overflow: hidden;
-  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 }
 
 .mockup-img {
@@ -1229,7 +1270,7 @@ h2 {
   margin: 0;
 }
 
-/* Animation on scroll (si usas AOS library) */
+/* Animation on scroll */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1257,37 +1298,3 @@ h2 {
   animation-delay: 0.3s;
 }
 
-.header-navbar .navbar-nav {
-  gap: 2rem; /* Separación consistente entre items */
-}
-
-/* Línea vertical entre elementos, inicia a partir del segundo */
-.header-navbar .navbar-nav .nav-item + .nav-item {
-  position: relative;
-}
-
-.header-navbar .navbar-nav .nav-item + .nav-item::before {
-  content: "";
-  position: absolute;
-  left: -1rem; /* ubicamos la línea entre los items (coincide con gap) */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 22px;
-  background-color: rgba(19, 35, 54, 0.6); /* azul oscuro semi-transparente */
-}
-
-/* Responsive: en menú colapsado no mostramos separadores */
-@media (max-width: 991.98px) {
-  .header-navbar .navbar-nav {
-    gap: 0;
-  }
-  .header-navbar .navbar-nav .nav-item + .nav-item::before {
-    display: none;
-  }
-}
-
-.header-navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.9) !important; /* Cambia el color de fondo a blanco */
-  transition: background-color 0.3s ease; /* Transición suave */
-}

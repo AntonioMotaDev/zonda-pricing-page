@@ -63,7 +63,7 @@
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
 }
 
 .pricing-card {
@@ -81,8 +81,8 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    min-height: 500px;
-    font-size: .7rem;
+    min-height: 400px;
+    font-size: .7rem;   
 }
 
 .pricing-card:hover {
@@ -91,7 +91,7 @@
 }
 
 .pricing-card.popular {
-    /* border: 2px solid transparent;
+    /* border: 3px solid transparent;
     background: linear-gradient(white, white) padding-box,
                 linear-gradient(135deg, var(--color-terracotta), var(--color-deep-rose)) border-box; */
     border: 3px solid var(--color-terracotta);
@@ -104,7 +104,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, var(--color-terracotta), var(--color-light-lila));
-    box-shadow: 10px 4px 20px rgba(128, 70, 83, 0.385);
+    /* box-shadow: 10px  4px 20px rgba(128, 70, 83, 0.385); */
     color: white;
     padding: 8px 24px;
     border-radius: 20px;
@@ -123,9 +123,8 @@
 
 .plan-billed {
     color: #6b7280;
-    text-align: start;
-    margin-top: -5px;
-    font-size: 0.75rem;
+    text-align: end;
+    font-size: 0.6rem;
     /* font-style: italic; */
 }
 
@@ -197,8 +196,8 @@
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    margin-top: auto;
-    align-self: flex-end;
+    margin-top: 0;
+    align-self: flex-start;
 }
 
 /* Estilos específicos para cada plan */
@@ -342,6 +341,115 @@
 .pricing-section {
     background: linear-gradient(180deg, var(--color-dark-blue), var(--color-median-blue), white);
     /* background-color: var(--color-fondo); */
+}
+
+.comparative-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 80px;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.comparative-btn {
+    --btn-bg-start: rgba(255,255,255,0.12);
+    --btn-bg-end: rgba(255,255,255,0.06);
+    --btn-border: rgba(255,255,255,0.55);
+    --btn-shadow: 0 6px 18px -6px rgba(0,0,0,0.35);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 34px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: .5px;
+    border: 1.5px solid var(--btn-border);
+    border-radius: 38px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--btn-bg-start), var(--btn-bg-end));
+    backdrop-filter: blur(6px) saturate(130%);
+    -webkit-backdrop-filter: blur(6px) saturate(130%);
+    cursor: pointer;
+    transition: background .35s ease, color .3s ease, box-shadow .35s ease, transform .25s ease;
+    box-shadow: var(--btn-shadow);
+    overflow: hidden;
+}
+
+.comparative-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.35) 0%, transparent 60%),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,.22) 0%, transparent 65%);
+    opacity: 0;
+    transition: opacity .5s ease;
+    pointer-events: none;
+}
+
+.comparative-btn::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -40%;
+    width: 200%;
+    height: 300%;
+    background: linear-gradient(115deg, transparent 0 45%, rgba(255,255,255,.5) 50%, transparent 55% 100%);
+    transform: rotate(8deg);
+    opacity: 0;
+    transition: opacity .6s ease, transform .9s cubic-bezier(.22,.61,.36,1);
+}
+
+.comparative-btn:hover {
+    color: var(--color-median-blue);
+    background: linear-gradient(135deg, #ffffff 0%, #f4f8ff 100%);
+    box-shadow: 0 12px 32px -8px rgba(15,30,70,.45);
+    transform: translateY(-4px);
+}
+
+.comparative-btn:hover::before {
+    opacity: .75;
+}
+
+.comparative-btn:hover::after {
+    opacity: 1;
+    transform: rotate(8deg) translateY(35%);
+}
+
+.comparative-btn:active {
+    transform: translateY(-1px) scale(.985);
+    box-shadow: 0 6px 20px -4px rgba(15,30,70,.45);
+}
+
+.comparative-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255,255,255,.55),
+                0 6px 24px -6px rgba(15,30,70,.55);
+}
+
+.comparative-btn:disabled,
+.comparative-btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: .55;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 560px) {
+    .comparative-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .comparative-btn,
+    .comparative-btn::after,
+    .comparative-btn::before {
+        transition: none;
+    }
 }
 
 .comparative-section {
