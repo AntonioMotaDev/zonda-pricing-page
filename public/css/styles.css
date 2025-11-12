@@ -323,7 +323,8 @@ h2 {
   justify-content: center;
   padding: 0 10vw 30px 10vw;
   margin: 0;
-  background: linear-gradient(180deg, white, var(--color-fondo));
+  /* background: linear-gradient(180deg, white, var(--color-fondo)); */
+  
 }
 
 .sistema {
@@ -1158,9 +1159,9 @@ h2 {
    MOCKUPS SECTION STYLES
    ======================================== */
 .mockups-section {
-  margin-top: 80px;
-  margin-bottom: 60px;
-  padding: 0 20px;
+  padding: 30px 0 140px 0 ;
+  border-top: 0.8rem solid var(--color-terracotta);
+  background: linear-gradient(180deg, var(--color-dark-blue), var(--color-median-blue));
 }
 
 .mockups-header {
@@ -1168,7 +1169,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-.mockups-header h3 {
+.mockups-header h2 {
   color: white;
   font-size: 2.5rem;
   font-weight: 700;
@@ -1178,9 +1179,10 @@ h2 {
 }
 
 .mockups-header p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.1rem;
-  font-weight: 400;
+  color: var(--color-terracotta);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
 }
 
 .mockups-grid {

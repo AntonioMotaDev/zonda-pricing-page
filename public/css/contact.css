@@ -1,7 +1,8 @@
 .contact-section {
     /* background: linear-gradient(180deg, var(--color-light-blue), var(--color-median-blue));     */
+    border-top: 0.8rem solid var(--color-terracotta);
     background-color: var(--color-fondo);
-    padding: 12rem 0 2rem 0;
+    padding: 2rem 0 2rem 0;
     color: white;
 }
 

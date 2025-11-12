@@ -4,6 +4,8 @@
     margin: 0 auto;
     padding: 60px 20px;
     box-shadow: 40 4px 20px rgba(1, 1, 1, 0.385);
+    background: linear-gradient(to bottom, var(--color-dark-blue), var(--color-median-blue));
+    border-top: 0.8rem solid var(--color-terracotta);
 }
 
 .pricing-header {
@@ -19,9 +21,10 @@
 }
 
 .pricing-header p {
-    color: white;
+    color: var(--color-terracotta);
     font-size: 1rem;
-    margin-bottom: 30px;
+    font-weight: 600;
+    margin-bottom: 0px;
 }
 
 .billing-toggle {
@@ -338,11 +341,7 @@
     font-weight: 400;
 }
 
-/* Sections spacing */
-.pricing-section {
-    background: linear-gradient(180deg, var(--color-dark-blue), var(--color-median-blue), white);
-    /* background-color: var(--color-fondo); */
-}
+
 
 .comparative-button-wrapper {
     display: flex;
@@ -455,7 +454,8 @@
 
 .comparative-section {
     background-color: white;
-    padding: 80px 0 0 0;
+    padding: 60px 0 100px 0;
+    border-top: 0.8rem solid var(--color-terracotta);
 }
 
 .comparative-section h2 {
@@ -468,8 +468,8 @@
 
 .comparative-section .lead {
     color: var(--color-terracotta);
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0;
 }

@@ -481,11 +481,11 @@ const galleryData = {
     'img/escritorio/SistemaClientes-ReportesClientes.png',
   ],
   appMovil: [
-    'img/appMovil/AppZonda1.jpeg',
-    'img/appMovil/AppZonda2.jpeg',
-    'img/appMovil/AppZonda3.jpeg',
-    'img/appMovil/AppZonda4.jpeg',
     'img/appMovil/AppZonda5.jpeg',
+    'img/appMovil/AppZonda4.jpeg',
+    'img/appMovil/AppZonda3.jpeg',
+    'img/appMovil/AppZonda2.jpeg',
+    'img/appMovil/AppZonda1.jpeg',
     'img/appMovil/AppZonda6.jpeg'
   ]
 };
@@ -545,7 +545,7 @@ async function openGalleryModal(type) {
   const modal = document.getElementById('galleryModal');
   const title = document.getElementById('galleryTitle');
   
-  title.textContent = type === 'escritorio' ? 'Galería - Servicio Web' : 'Galería - App Móvil';
+  // title.textContent = type === 'escritorio' ? 'Galería - Servicio Web' : 'Galería - App Móvil';
   
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
